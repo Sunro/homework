@@ -1,10 +1,6 @@
-print('\n\n1st program')
-print(9**0.5*5)
-print('2nd program')
-print(9.99>0.98 and 1000!=1000.1)
-print('3rd program')
-print(2*2+2)
-print(2*(2+2))
-print(2*2+2==2*(2+2))
-print('4th program')
-print(int((float(123.456)*10)%10))
+#Практическое задание по работе в Pycharm - "Переменные".
+number_of_completed = 12
+number_of_hours_spent = 1.5
+course_name = 'Python'
+time_per_task = number_of_hours_spent / number_of_completed
+print(f'Курс: {course_name}, всего задач: {number_of_completed}, затрачено часов: {number_of_hours_spent}, среднее время выполнения {time_per_task} часа.')
