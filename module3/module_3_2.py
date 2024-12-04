@@ -1,6 +1,5 @@
-# Если вы решали старую версию задачи, проверка будет производиться по ней.
-# Ссылка на старую версию тут.
-
+# Домашняя работа по уроку "Способы вызова функции"
+# https://urban-university.pro/student/lesson/8815
 # Цель: закрепить знания о параметрах по умолчанию и именованных аргументах.
 
 # Задача "Рассылка писем":
@@ -18,24 +17,24 @@
 
 
 
-def verify_mail_recipient_sender(message, recipient, sender='university.help@gmail.com'):
-    print(not(('@' in recipient and ('.com' in recipient or '.ru' in recipient or '.net' in recipient) ) and ('@' in sender and ('.com' in sender or '.ru' in sender or '.net'in sender))),'\n')
-    # print('@' in sender and ('.com' in sender or '.ru' in sender or '.net'in sender),'\n')
-    # if ('@' and ('.com' or '.ru' or '.net') in recipient) or ('@' and ('.com' or '.ru' or '.net') in sender):
-    # else:
-    #     print(('@' and ('.com' or '.ru' or '.net') in recipient) or ('@' and ('.com' or '.ru' or '.net') in sender))
-
-def verify_recipient_is_not_sender(recipient, sender):
-    if recipient != sender:
-        return True
-    else:
-        return False
-
-def verify_default_sender(sender):
-    if sender == 'university.help@gmail.com':
-        return True
-    else:
-        return False
+# def verify_mail_recipient_sender(message, recipient, sender='university.help@gmail.com'):
+#     print(not(('@' in recipient and ('.com' in recipient or '.ru' in recipient or '.net' in recipient) ) and ('@' in sender and ('.com' in sender or '.ru' in sender or '.net'in sender))),'\n')
+#     # print('@' in sender and ('.com' in sender or '.ru' in sender or '.net'in sender),'\n')
+#     # if ('@' and ('.com' or '.ru' or '.net') in recipient) or ('@' and ('.com' or '.ru' or '.net') in sender):
+#     # else:
+#     #     print(('@' and ('.com' or '.ru' or '.net') in recipient) or ('@' and ('.com' or '.ru' or '.net') in sender))
+#
+# def verify_recipient_is_not_sender(recipient, sender):
+#     if recipient != sender:
+#         return True
+#     else:
+#         return False
+#
+# def verify_default_sender(sender):
+#     if sender == 'university.help@gmail.com':
+#         return True
+#     else:
+#         return False
 
 def send_email(message, recipient, *, sender='university.help@gmail.com'):
     if not (('@' in recipient and ('.com' in recipient or '.ru' in recipient or '.net' in recipient) ) and ('@' in sender and ('.com' in sender or '.ru' in sender or '.net'in sender))):

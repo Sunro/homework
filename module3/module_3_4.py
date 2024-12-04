@@ -6,6 +6,9 @@
 # последовательность в параметр *other_words.
 # Функция должна составить новый список same_words только из тех слов списка other_words, которые содержат root_word
 # или наоборот root_word содержит одно из этих слов. После вернуть список same_words в качестве результата своей работы.
+def single_root_words(root_word, *other_words):
+    same_words = 0
+    return same_words
 
 # Пункты задачи:
 # Объявите функцию single_root_words и напишите в ней параметры root_word и *other_words.
@@ -32,4 +35,4 @@ print(result2)
 # В этой задаче вам могут понадобиться следующие методы строк/ключевые слова:
 # а. Оператор in или count()
 
-b. lower()/upper().
+# b. lower()/upper().
