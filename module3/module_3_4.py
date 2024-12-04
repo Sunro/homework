@@ -1,4 +1,5 @@
 # Самостоятельная работа по уроку "Произвольное число параметров"
+# https://urban-university.pro/student/lesson/8826
 # Цель: закрепить знание использования параметров *args/ **kwargs на практике.
 
 # Задача "Однокоренные":
@@ -7,7 +8,14 @@
 # Функция должна составить новый список same_words только из тех слов списка other_words, которые содержат root_word
 # или наоборот root_word содержит одно из этих слов. После вернуть список same_words в качестве результата своей работы.
 def single_root_words(root_word, *other_words):
-    same_words = 0
+    same_words = []
+    for i in other_words:
+        if root_word.lower() in i.lower():
+            same_words.append(i)
+    if same_words == []:
+        for i in other_words:
+            if i.lower() in root_word.lower():
+                same_words.append(i)
     return same_words
 
 # Пункты задачи:
