@@ -17,14 +17,26 @@
 # Если же длина str_number не больше 1, тогда вернуть оставшуюся цифру first.
 # Стек вызовов будет выглядеть следующим образом:
 
-get_multiplied_digits(40203) -> 4 * get_multiplied_digits(203) -> 4 * 2 * get_multiplied_digits(3) -> 4 * 2 * 3
+# get_multiplied_digits(40203) -> 4 * get_multiplied_digits(203) -> 4 * 2 * get_multiplied_digits(3) -> 4 * 2 * 3
+# first = 0
+def get_multiplied_digits(number=3242):
+    str_number = str(number)
+    first = int(str_number[0])
+    if len(str_number) > 1:
+        return first * get_multiplied_digits(int(str_number[1:]))
+    if first != 0:
+        return first
+    return 1
 
 # Пример результата выполнения программы:
 # Исходный код:
+# result =
 result = get_multiplied_digits(40203)
 print(result)
-result2 = get_multiplied_digits(402030)
-print(result2)
+result = get_multiplied_digits(402030)
+print(result)
+result = get_multiplied_digits(402030456460416)
+print(result)
 
 # Вывод на консоль:
 # 24
