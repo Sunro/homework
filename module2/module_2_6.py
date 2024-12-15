@@ -8,8 +8,8 @@ def is_prime(a):
         d += 2
     return d * d > a
 
-def password_search(number=0):
-    for i in numbers:
+def password_search(number_list):
+    for i in number_list:
         string = ''
         if is_prime(i):
             for j in range(int(i) - 1, 1, -1):
@@ -30,10 +30,12 @@ def password_search(number=0):
                     if j < k:
                         string += str(j) + str(k)
             print(i, string)
-    number = input('Введите число для подбора пароля: ')
-    numbers.clear()
-    numbers.append(int(number))
-    password_search(numbers)
+    number_input = input('Введите число для подбора пароля: ')
+    # numbers.clear()
+    number = []
+    number.append(int(number_input))
+    # numbers.append(int(number))
+    password_search(number)
 
 password_search(numbers)
 
