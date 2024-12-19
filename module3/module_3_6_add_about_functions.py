@@ -41,19 +41,26 @@ def calculate_structure_sum(*data):
     uni_list = []
     if isinstance(i, list):
       print('list', i)
-      # if len(i) > 1:
-      #   for j in i:
-      #     if not isinstance(j, list):
-      #       calculate_structure_sum(j)
-      #     print('test')
+      if len(i) > 1:
+        for j in i:
+          if not isinstance(j, int or str):
+            calculate_structure_sum(j)
+            print('test-list',j)
 
     if isinstance(i, dict):
-      print('dict', i)
-      list_ = list(i)
-      len_list = list(i.values())
-      for j in list_:
-        len_list.append(len(j))
+      # print('dict', i)
+      # list_ = list(i)
+      # len_list = list(i.values())
+      # for j in list_:
+      #   len_list.append(len(j))
       # print('sum_dict', len_list)
+      print('dict', i)
+      if len(i) > 1:
+        for j in i:
+          if not isinstance(j, int or str):
+            calculate_structure_sum(j)
+            print('test-dict', j)
+
 
     if isinstance(i, str):
       print('str', i)
@@ -63,21 +70,27 @@ def calculate_structure_sum(*data):
       # print('len_str', i, len_str)
 
     if isinstance(i, tuple):
+      # print('tuple', i)
+      # # len_tuple = sum(i)
+      # # len_str.append(len(i))
+      # # print(len_tuple)
+      # len_tuple = []
+      # no_int_tuple = []
+      # for j in i:
+      #   if isinstance(j, int):
+      #     # len_tuple += j
+      #     len_tuple.append(j)
+      #   else:
+      #     no_int_tuple.append(j)
       print('tuple', i)
-      # len_tuple = sum(i)
-      # len_str.append(len(i))
-      # print(len_tuple)
-      len_tuple = []
-      no_int_tuple = []
-      for j in i:
-        if isinstance(j, int):
-          # len_tuple += j
-          len_tuple.append(j)
-        else:
-          no_int_tuple.append(j)
+      if len(i) > 1:
+        for j in i:
+          if not isinstance(j, int or str):
+            calculate_structure_sum(j)
+            print('test-tuple', j)
 
-      print('len_tuple', len_tuple)
-      print('no_int_tuple', no_int_tuple)
+      # print('len_tuple', len_tuple)
+      # print('no_int_tuple', no_int_tuple)
       # if range(no_int_tuple) != 0:
         #   calculate_structure_sum(*j)
       # print('len_tuple', len_tuple)
@@ -87,8 +100,9 @@ def calculate_structure_sum(*data):
 # print(total)  # Выведет: 150 (сумма всех чисел в кортеже) [1](https://ru.hexlet.io/qna/python/questions/kakaya-funktsiya-nuzhna-dlya-slozheniya-chisle-v-python)
 
 
-result = calculate_structure_sum(*data_structure)
-print(result)
+# result = calculate_structure_sum(*data_structure)
+calculate_structure_sum(*data_structure)
+# print(result)
 
 # Выходные данные (консоль):
 # 99
