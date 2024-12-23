@@ -16,5 +16,8 @@ for i in range(len(grades)):
     # print(' ',middle_grade[i])
 students_middle_grades = dict(zip(list_students, middle_grade))
 students_middle_grades_round = dict(zip(list_students, middle_grade_round))
-print(students_middle_grades)
+def main():
+    print(students_middle_grades_round)
+if __name__ == '__main__':
+    main()
 # print(students_middle_grades_round)

@@ -1,3 +1,4 @@
+import sys
 from array import array
 from random import randint
 data = [randint(1, 99) for _ in range(1000)]
@@ -16,9 +17,12 @@ data = [randint(1, 99) for _ in range(1000)]
 def bubble(array):
     iter = len(array) - 1
     for i in range(iter):
-        for j in range(iter-i)
+        for j in range(iter-i):
             if array[i] > array[j+1]:
                 array[j],array[j+1] = array[j+1],array[j]
 print(data)
 print(array)
 bubble(data)
+print(sys.path)
+print(sys.argv) #можно передавать в программу команды
+# python 4_x_vebinar.py hello 24 25 bool
