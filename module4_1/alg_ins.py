@@ -1,4 +1,4 @@
-from dop_module4.practice_1_2 import *
+from dop_to_module4.practice_1_2 import *
 data_1 = list(map(int, input('Введите числа через пробел: ').split()))
 data_2 = list(map(int, input('Введите числа через пробел: ').split()))
 data_3 = list(map(int, input('Введите числа через пробел: ').split()))

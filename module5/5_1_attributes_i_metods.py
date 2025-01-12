@@ -1,10 +1,13 @@
 # Домашняя работа по уроку "Атрибуты и методы объекта"
+from module1.module_1_1 import number_of_completed
+
 
 # Ваша задача:
 # Цель: применить на практике знания о классах, объектах и их атрибутах.
 
 # Задача "Developer - не только разработчик":
 # Реализуйте класс House, объекты которого будут создаваться следующим образом:
+
 # House('ЖК Эльбрус', 30)
 # Объект этого класса должен обладать следующими атрибутами:
 # self.name - имя, self.number_of_floors - кол-во этажей
@@ -19,6 +22,15 @@
 # Создайте объект класса House с произвольным названием и количеством этажей.
 # Вызовите метод go_to у этого объекта с произвольным числом.
 
+class House:
+    def __init__(self, name, number_of_floors):
+        self.name = name
+        self.number_of_floors = number_of_floors
+    def go_to(self, new_floor):
+        for i in 1, range(new_floor):
+            if i <= self.number_of_floors:
+                print(i)
+    # def new_floor(self):
 
 # Пример результата выполнения программы:
 # Исходные данные:

@@ -20,11 +20,11 @@ def selection_sort(ls):
     for i in range(len(ls)):
         # изначально считаем минимальным первый элемент
         lowest = i
-        цикл для перебора неотсортированных элементов
+        # цикл для перебора неотсортированных элементов
         for j in range(i + 1, len(ls)):
             if ls[j] < ls[lowest]: #Tab to complete
                 lowest = j
-            самый минимальный элемент меняем с первым элементом
+            # самый минимальный элемент меняем с первым элементом
             ls[i], ls[lowest] = ls[lowest], ls[i]
 
 selection_sort(nums)

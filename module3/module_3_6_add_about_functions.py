@@ -29,90 +29,90 @@
 
 # Входные данные (применение функции):
 data_structure = [
-[1, 2, 3],
-{'a': 4, 'b': 5},
-(6, {'cube': 7, 'drum': 8}),
-"Hello",
-((), [{(2, 'Urban', ('Urban2', 35))}])
+    [1, 2, 3],
+    {'a': 4, 'b': 5},
+    (6, {'cube': 7, 'drum': 8}),
+    "Hello",
+    ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
 dict_to_list = []
 tuple_to_list = []
 list_to = []
 data_structure_convert_to_list = []
 def calculate_structure_sum(*data):
-  all_convert = 0
-  for i in data:
-    uni_list = []
-    if isinstance(i, list):
+    all_convert = 0
+    for i in data:
+        uni_list = []
+        if isinstance(i, list):
 
-      # print('list', i)
-      if len(i) > 1:
-        for j in i:
-          if not isinstance(j, int or str):
-            calculate_structure_sum(j)
-            # print('test-list',j)
-          else:
-            list_to.append(i)
+            # print('list', i)
+            if len(i) > 1:
+                for j in i:
+                    if not isinstance(j, int or str):
+                        calculate_structure_sum(j)
+                        # print('test-list',j)
+                    else:
+                        list_to.append(i)
 
-    if isinstance(i, dict):
-      dict_to_list.append(list(i))
-      k = list(i.values())
-      data_structure_convert_to_list.append(j)
-      data_structure_convert_to_list.append(k)
-      # print('dict', i)
-      # list_ = list(i)
-      # len_list = list(i.values())
-      # for j in list_:
-      #   len_list.append(len(j))
-      # print('sum_dict', len_list)
-      # print('dict', i)
-      for j in i:
-        if not isinstance(j, int or str):
-          calculate_structure_sum(j)
-          # print('test-dict', j)
-        else:
-          data_structure_convert_to_list.append(j)
-        if not isinstance(k, int or str):
-          calculate_structure_sum(k)
-          # print('test-dict', j)
-        else:
-          data_structure_convert_to_list.append(k)
+        if isinstance(i, dict):
+            dict_to_list.append(list(i))
+            k = list(i.values())
+            data_structure_convert_to_list.append(j)
+            data_structure_convert_to_list.append(k)
+            # print('dict', i)
+            # list_ = list(i)
+            # len_list = list(i.values())
+            # for j in list_:
+            #   len_list.append(len(j))
+            # print('sum_dict', len_list)
+            # print('dict', i)
+            for j in i:
+                if not isinstance(j, int or str):
+                    calculate_structure_sum(j)
+                    # print('test-dict', j)
+                else:
+                    data_structure_convert_to_list.append(j)
+                if not isinstance(k, int or str):
+                    calculate_structure_sum(k)
+                    # print('test-dict', j)
+                else:
+                    data_structure_convert_to_list.append(k)
 
-    # if isinstance(i, str):
-    #   # print('str', i)
-    #   data_structure_convert_to_list.append(i)
-    #   # print('str', i)
-    #   # print('len_str', i, len_str)
+        # if isinstance(i, str):
+        #   # print('str', i)
+        #   data_structure_convert_to_list.append(i)
+        #   # print('str', i)
+        #   # print('len_str', i, len_str)
 
-    if isinstance(i, tuple):
-      # print('tuple', i)
-      # # len_tuple = sum(i)
-      # # len_str.append(len(i))
-      # # print(len_tuple)
-      # len_tuple = []
-      # no_int_tuple = []
-      # for j in i:
-      #   if isinstance(j, int):
-      #     # len_tuple += j
-      #     len_tuple.append(j)
-      #   else:
-      #     no_int_tuple.append(j)
-      # print('tuple', i)
-      if len(i) > 1:
-        for j in i:
-          if not isinstance(j, int or str):
-            calculate_structure_sum(j)
-            print('test-tuple', j)
-          else:
-            tuple_to_list.append(list(i))
-      # print('len_tuple', len_tuple)
-      # print('no_int_tuple', no_int_tuple)
-      # if range(no_int_tuple) != 0:
-        #   calculate_structure_sum(*j)
-      # print('len_tuple', len_tuple)
-  data_structure_convert_to_list.append(list)
-  data_structure_convert_to_list.append(tuple_to_list)
-  data_structure_convert_to_list.append(tuple_to_list)
+        if isinstance(i, tuple):
+            # print('tuple', i)
+            # # len_tuple = sum(i)
+            # # len_str.append(len(i))
+            # # print(len_tuple)
+            # len_tuple = []
+            # no_int_tuple = []
+            # for j in i:
+            #   if isinstance(j, int):
+            #     # len_tuple += j
+            #     len_tuple.append(j)
+            #   else:
+            #     no_int_tuple.append(j)
+            # print('tuple', i)
+            if len(i) > 1:
+                for j in i:
+                    if not isinstance(j, int or str):
+                        calculate_structure_sum(j)
+                        print('test-tuple', j)
+                    else:
+                        tuple_to_list.append(list(i))
+            # print('len_tuple', len_tuple)
+            # print('no_int_tuple', no_int_tuple)
+            # if range(no_int_tuple) != 0:
+            #   calculate_structure_sum(*j)
+            # print('len_tuple', len_tuple)
+    data_structure_convert_to_list.append(list)
+    data_structure_convert_to_list.append(tuple_to_list)
+    data_structure_convert_to_list.append(tuple_to_list)
 
 # numbers = (10, 20, 30, 40, 50)
 # total = sum(numbers)
