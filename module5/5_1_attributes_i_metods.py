@@ -1,6 +1,4 @@
 # Домашняя работа по уроку "Атрибуты и методы объекта"
-from module1.module_1_1 import number_of_completed
-
 
 # Ваша задача:
 # Цель: применить на практике знания о классах, объектах и их атрибутах.
@@ -27,16 +25,19 @@ class House:
         self.name = name
         self.number_of_floors = number_of_floors
     def go_to(self, new_floor):
-        for i in 1, range(new_floor):
-            if i <= self.number_of_floors:
-                print(i)
-    # def new_floor(self):
+        if new_floor <= self.number_of_floors:
+            for i in range(new_floor):
+                print(i+1)
+        else:
+            print('Этаж не существует')
 
 # Пример результата выполнения программы:
 # Исходные данные:
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
+print(h1.name, h1.number_of_floors)
 h1.go_to(5)
+print(h2.name, h2.number_of_floors)
 h2.go_to(10)
 
 # Вывод на консоль:
